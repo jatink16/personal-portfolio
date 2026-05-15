@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jatin Kola | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Jatin Kola, a passionate Full Stack Developer and UI/UX Designer.">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">JatinKola</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="intro-text">
+        <h2 class="greeting-blue"><span id="typewriter-greeting"></span><span class="cursor">|</span></h2>
+        <h1>I'm Jatin Kola</h1>
+        <div class="role-container title-tag">
+          <span class="hash">#</span> <span id="typewriter-role"></span><span class="cursor">|</span>
+        </div>
+        <p>
+          Computer Science student passionate about UI/UX design, web development,
+          and data science. focused on modern digital experiences that combine
+          beauty, functionality, and innovation.
+        </p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="image-display">
+        <img src="/fullstack.png" id="sync-icon" alt="Work Symbol">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-text">
+        <p>
+          I'm Jatin Kola, a Computer Science student passionate about creating
+          modern digital experiences through UI/UX design, web development,
+          and software engineering. With a strong foundation in computer
+          science, I focus on building products that combine clean design,
+          functionality, and innovation while solving real-world problems
+          through technology.
+        </p>
+        <br>
+        <p>
+          My work revolves around creating intuitive user experiences,
+          developing responsive web interfaces, and exploring modern
+          technologies that enhance digital products. I'm driven by creativity,
+          innovation, and continuous learning, constantly pushing myself to
+          improve both technically and creatively.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2 class="section-title">Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Web Development</h3>
+          <br>
+          <p>Creating functional and modern web applications focused on performance, usability, and real-world problem
+            solving.</p>
+        </div>
+        <div class="service-card">
+          <h3>UI/UX Design</h3>
+          <br>
+          <p>Designing intuitive and visually engaging user interfaces focused on creating smooth and user-friendly
+            digital experiences.</p>
+        </div>
+        <div class="service-card">
+          <h3>Cloud Development</h3>
+          <br>
+          <p>Designing and managing scalable cloud-based solutions focused on performance, deployment, and modern
+            infrastructure technologies.</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Science</h3>
+          <br>
+          <p>Analyzing and interpreting data to discover insights, solve problems, and support data-driven decision
+            making.</p>
+        </div>
+        <div class="service-card">
+          <h3>Product Design</h3>
+          <br>
+          <p>Transforming ideas into structured digital products through research, wireframing, prototyping, and
+            interface planning.</p>
+        </div>
+        <div class="service-card">
+          <h3>Agile Software Development</h3>
+          <br>
+          <p>Collaborating in adaptive and iterative development processes focused on teamwork, continuous improvement,
+            and efficient project delivery.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-wrapper">
+      <h2 class="section-title">Skills</h2>
+      <br><br><br><br>
+      <div id="skills-section" class="orbit-system">
+        <div class="center-hub">MY<br>SKILLS</div>
+
+        <div class="orbit-container">
+          <div class="skill-node" onclick="showDetails('web')" style="--i:0;"><span>Web Development</span></div>
+          <div class="skill-node" onclick="showDetails('uiux')" style="--i:1;"><span>UI/UX Design</span></div>
+          <div class="skill-node" onclick="showDetails('data')" style="--i:2;"><span>Data Science</span></div>
+          <div class="skill-node" onclick="showDetails('cloud')" style="--i:3;"><span>Cloud Development</span></div>
+          <div class="skill-node" onclick="showDetails('product')" style="--i:4;"><span>Product Design</span></div>
+          <div class="skill-node" onclick="showDetails('agile')" style="--i:5;"><span>Agile Development</span></div>
+        </div>
+      </div>
+
+      <svg class="connector-svg">
+        <line id="sync-line" x1="0" y1="0" x2="0" y2="0" />
+      </svg>
+
+      <div id="details-panel" class="details-panel">
+        <h2 id="panel-title">Title</h2>
+        <ul id="panel-list"></ul>
+        <button class="back-btn" onclick="hideDetails()">Back to Skills</button>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools">
+      <h2 class="section-title">Tools</h2>
+      <div class="tools-grid">
+        <div class="tool-card"><span class="tool-name">VS Code</span></div>
+        <div class="tool-card"><span class="tool-name">GitHub</span></div>
+        <div class="tool-card"><span class="tool-name">Figma</span></div>
+        <div class="tool-card"><span class="tool-name">FigJam</span></div>
+        <div class="tool-card"><span class="tool-name">Google Colab</span></div>
+        <div class="tool-card"><span class="tool-name">Supabase</span></div>
+        <div class="tool-card"><span class="tool-name">AWS</span></div>
+        <div class="tool-card"><span class="tool-name">Firebase</span></div>
+        <div class="tool-card"><span class="tool-name">Notion</span></div>
+        <div class="tool-card"><span class="tool-name">Miro</span></div>
+        <div class="tool-card"><span class="tool-name">Jira</span></div>
+        <div class="tool-card"><span class="tool-name">Trello</span></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">DiGi Evaluation Script</h3>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Database</span>
+              <span>Web Technologies</span>
+              <span>Agile</span>
+            </div>
+            <p class="project-description">
+              Built a full-stack digital evaluation system to simplify and automate academic assessment workflows.
+            </p>
+            <ul class="project-bullets">
+              <li>Developed backend logic and integrated database operations using Python for efficient data handling.
+              </li>
+              <li>Improved evaluation efficiency by reducing manual processing time through automation features.</li>
+              <li>Applied Agile development practices to manage workflow, testing, and iterative improvements.</li>
+            </ul>
+            <div class="project-tools">
+              <strong>Tools:</strong> VS Code • GitHub • Python • SQL
+            </div>
+            <a href="javascript:void(0)" class="btn btn-secondary view-project-btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Pocket Code</h3>
+            <div class="project-tags">
+              <span>Figma</span>
+              <span>UI/UX Design</span>
+            </div>
+            <p class="project-description">
+              Designed a coding-based micro-task platform that enables teenagers to earn pocket money through real-world
+              projects.
+            </p>
+            <ul class="project-bullets">
+              <li>Created user flows, wireframes, and high-fidelity prototypes focused on engagement and usability.</li>
+              <li>Developed an intuitive earnings visualization system to enhance user motivation and experience.</li>
+              <li>Focused on clean, accessible, and user-friendly interface design for both app and web platforms.</li>
+            </ul>
+            <div class="project-tools">
+              <strong>Tools:</strong> Figma • FigJam • Miro
+            </div>
+            <a href="javascript:void(0)" class="btn btn-secondary view-project-btn">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Share My Meal</h3>
+            <div class="project-tags">
+              <span>Figma</span>
+              <span>UI/UX</span>
+              <span>Design Thinking</span>
+            </div>
+            <p class="project-description">
+              Designed a social impact solution aimed at reducing food wastage by connecting donors with receivers.
+            </p>
+            <ul class="project-bullets">
+              <li>Conducted user research and developed personas to improve usability and accessibility for diverse
+                users.</li>
+              <li>Created structured wireframes and interface designs focused on simplicity and ease of use.</li>
+              <li>Applied design thinking principles to enhance user interaction, accessibility, and overall user
+                experience.</li>
+            </ul>
+            <div class="project-tools">
+              <strong>Tools:</strong> Figma • Notion • Miro
+            </div>
+            <a href="javascript:void(0)" class="btn btn-secondary view-project-btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject">
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">JATIN KOLA</div>
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#tools">Tools</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Jatin Kola. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
