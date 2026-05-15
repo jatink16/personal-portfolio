@@ -16,6 +16,8 @@
   --gradient-1: rgba(59, 130, 246, 0.15);
   --gradient-2: rgba(139, 92, 246, 0.15);
   --gradient-3: rgba(101, 158, 251, 0.08);
+  --selected-node-bg: linear-gradient(135deg, rgba(20, 20, 35, 0.98), rgba(30, 30, 50, 0.98));
+  --selected-node-text: #ffffff;
 }
 
 [data-theme="light"] {
@@ -32,6 +34,8 @@
   --gradient-1: rgba(37, 99, 235, 0.1);
   --gradient-2: rgba(124, 58, 237, 0.1);
   --gradient-3: rgba(37, 99, 235, 0.05);
+  --selected-node-bg: linear-gradient(135deg, #ffffff, #f1f5f9);
+  --selected-node-text: #0f172a;
 }
 
 * {
@@ -505,7 +509,8 @@ section {
 .skill-node.selected {
   border-color: var(--accent-primary);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
-  box-shadow: 0 0 60px rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.4);
+  color: var(--selected-node-text);
   z-index: 100;
 
   position: relative;
@@ -519,12 +524,7 @@ section {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(20, 20, 35, 0.98),
-      rgba(30, 30, 50, 0.98)
-    );
+  background: var(--selected-node-bg);
 
   border-radius: 50%;
 
