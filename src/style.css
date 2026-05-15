@@ -18,6 +18,8 @@
   --gradient-3: rgba(101, 158, 251, 0.08);
   --selected-node-bg: linear-gradient(135deg, rgba(20, 20, 35, 0.98), rgba(30, 30, 50, 0.98));
   --selected-node-text: #ffffff;
+  --input-focus-bg: #ffffff;
+  --input-focus-text: #000000;
 }
 
 [data-theme="light"] {
@@ -36,6 +38,8 @@
   --gradient-3: rgba(37, 99, 235, 0.05);
   --selected-node-bg: linear-gradient(135deg, #ffffff, #f1f5f9);
   --selected-node-text: #0f172a;
+  --input-focus-bg: rgba(0, 0, 0, 0.03);
+  --input-focus-text: #0f172a;
 }
 
 * {
@@ -811,16 +815,20 @@ textarea {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+input:hover,
+textarea:hover,
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
-  background: var(--glass-bg);
-  color: var(--text-color);
+  background: var(--input-focus-bg);
+  color: var(--input-focus-text);
   box-shadow: 0 0 30px rgba(0, 98, 255, 0.2);
 }
 
-/* Placeholder color on focus */
+/* Placeholder color on hover and focus */
+input:hover::placeholder,
+textarea:hover::placeholder,
 input:focus::placeholder,
 textarea:focus::placeholder {
   color: rgba(0, 0, 0, 0.5);
