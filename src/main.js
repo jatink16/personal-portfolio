@@ -236,9 +236,29 @@ function setupTheme() {
   });
 }
 
+// Mobile Menu Logic
+function setupMobileMenu() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  const navItems = document.querySelectorAll('.nav-links a');
+
+  if (!mobileMenuBtn || !navLinks) return;
+
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+}
+
 // Load everything
 window.addEventListener('load', () => {
   setupTheme();
+  setupMobileMenu();
   handleScroll();
 
   // Start animations
